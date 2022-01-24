@@ -1,0 +1,13 @@
+# Faça um programa que imprima a tabuada do 9 (de 9*1 a 9*10) usando loops
+
+numero = 9
+
+contador = 0
+
+while contador <= 10:
+
+   tab = numero * contador
+
+   print(f'{numero} * {contador} = {tab}')
+
+   contador += 1

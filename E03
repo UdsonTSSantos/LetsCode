@@ -1,0 +1,68 @@
+# Vamos fazer um programa para verificar quem é o assassino de um crime. 
+# Para descobrir o assassino, a polícia faz um pequeno questionário com 5 
+# perguntas onde a resposta só pode ser sim ou não:
+
+# a. Mora perto da vítima?
+# b. Já trabalhou com a vítima?
+# c. Telefonou para a vítima?
+# d. Esteve no local do crime?
+# e. Devia para a vítima?
+
+# Cada resposta sim dá um ponto para o suspeito. A polícia considera que os 
+# suspeitos com 5 pontos são os assassinos, com 4 a 3 pontos são cúmplices e 
+# 2 pontos são apenas suspeitos, necessitando outras investigações. Valores 
+# iguais ou abaixo de 1 são liberados
+
+from re import S
+
+
+print("As perguntas precisam ser respondidas com (S) sim ou (N) não.".upper())
+
+mora = input("Mora perto da vítima? ").upper()
+if mora == "S":
+    print("Você respondeu que SIM.\n")
+elif mora == "N":
+    print("Você respondeu de NÃO.\n")
+
+trabalhou = input("Já trabalhou com a vítima? ").upper()
+if trabalhou == "S":
+    print("Você respondeu que já trabalhou com a vítima.\n")
+elif trabalhou == "N":
+    print("Você respondeu que nunca trabalhou com a vítima.\n")
+
+telefonou = input("Telefonou para a vítima? ").upper()
+if telefonou == "S":
+    print("Você respondeu que telefonou para a vítima.\n")
+elif telefonou == "N":
+    print("Não realizou nenhuma ligação para a vítima.\n")
+
+esteve = input("Esteve no local do crime? ").upper()
+if esteve == "S":
+    print("Confirmado que esteve no local do crime.\n")
+elif esteve == "N":
+    print("Não esteve no local do crime.\n")
+
+devia = input("Tinha alguma dívida com a vítima? ").upper()
+if devia == "S":
+    print("Você confirmou que devia para a vítima.\n")
+elif devia == "N":
+    print("Ótima, não tinha nehuma dívida com a vítima.\n")
+
+
+
+respostas = [mora, trabalhou, telefonou, esteve, devia]
+apuracao = respostas.count("S")
+if apuracao == 5:
+    print('Suspeito é considerado culpado.\n'.upper())
+elif (apuracao == 4) or (apuracao == 3):
+    print('Suspeito é considerado cúmplice.\n'.upper())
+elif apuracao == 2:
+    print('Ainda é considerado suspeito.\n'.upper())
+elif apuracao <= 1:
+    print('Não foi comprovado nada contra o suspeito, dessa forma o mesmo está liberado.\n'.upper())
+
+
+
+
+
+
