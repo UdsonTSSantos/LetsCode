@@ -1,0 +1,6 @@
+# Faça um programa que olhe todo so sitens de uma lista e diga quantos deles são pares.
+
+itens = [1, 3, 4, 8, 7, 3, 9, 0]
+for num in itens:
+    if num % 2 == 0:
+        print(num, end = " ")

@@ -1,0 +1,6 @@
+# Faça um programa que peça para o usuário digitar uma palavra e imprima 
+# cada letra em uma linha.
+
+nome = str(input('Informe seu primeiro nome por favor.'))
+for i in range(len(nome)):
+    print(nome[i])
